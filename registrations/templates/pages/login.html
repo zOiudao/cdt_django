@@ -1,7 +1,48 @@
-<div class="input-group mb-3">
-    <span class="input-group-text">@</span>
-    <div class="form-floating">
-        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
-        <label for="floatingInputGroup1">Username</label>
+{% extends "base.html" %}
+{% block content %}
+
+<button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Exibir menu</button>
+
+<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu lateral</h5>
+    <button type="button" class="btn-close bg-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <form action="." method="post" class='card border-dark p-4'>
+    <div class="grid text-center">
+        <div class="g-col-4">
+            <div class="input-group mb-3">
+                <span class="input-group-text">@</span>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                    <label for="floatingInputGroup1">Username</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="g-col-4">
+            <div class="input-group mb-3">
+                <span class="input-group-text">@</span>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                    <label for="floatingInputGroup1">Username</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="g-col-4">
+            <div class="input-group mb-3">
+                <span class="input-group-text">@</span>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                    <label for="floatingInputGroup1">Username</label>
+                </div>
+            </div>
+        </div>
     </div>
+</form>
+  </div>
 </div>
+
+{% endblock content %}

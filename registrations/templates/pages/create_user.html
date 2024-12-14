@@ -1,0 +1,65 @@
+{% extends "base.html" %} {% block content %}
+
+<div
+  class="d-flex justify-content-center align-items-center"
+  style="height: 100vh"
+>
+  <form method="post" class="card border-dark p-4">
+    {% csrf_token %}
+    <div class="input-group mb-3">
+      <span class="input-group-text">@</span>
+      <div class="form-floating">
+        {{form.username}}
+        <label for="floatingInputGroup1">Nome de Usuário</label>
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">@</span>
+      <div class="form-floating">
+        {{form.first_name}}
+        <label for="floatingInputGroup1">Primeiro nome</label>
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">@</span>
+      <div class="form-floating">
+        {{form.last_name}}
+        <label for="floatingInputGroup1">Sobrenome</label>
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">@</span>
+      <div class="form-floating">
+        {{form.email}}
+        <label for="floatingInputGroup1">Email</label>
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">@</span>
+      <div class="form-floating">
+        {{form.password1}}
+        <label for="floatingInputGroup1">Senha</label>
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">@</span>
+      <div class="form-floating">
+        {{form.password2}}
+        <label for="floatingInputGroup1">Confirmar senha</label>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <button type="submit" class="btn btn-outline-primary w-100">
+        Cadastrar
+      </button>
+    </div>
+  </form>
+</div>
+
+{% endblock content %}

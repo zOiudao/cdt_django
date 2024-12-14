@@ -123,3 +123,7 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+CSRF_TRUSTED_ORIGINS = [
+    "https://localhost:8000",  # Adicione sua origem confiável aqui
+    "http://localhost:8000",  # Se você estiver usando HTTP em vez de HTTPS
+]

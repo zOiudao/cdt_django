@@ -2,26 +2,30 @@
 
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">Navbar</a>
+        {% comment %} <a class="navbar-brand mx-5" href="#">Navbar</a> {% endcomment %}
         
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-                <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Exibir menu</button>
-            </li>
+            {% comment %} <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+            </ul> {% endcomment %}
+            <ul class="navbar-nav ms-auto mx-5">
+                <li class="nav-item">
+                    <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -29,16 +33,109 @@
 
 <header>
 
-    <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas offcanvas-start text-bg-light" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu lateral</h5>
-        <button type="button" class="btn-close bg-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
+        <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <ul>
-            <li><a href="/cadastros/">Home page</a></li>
-            <li><a href="/cadastros/register/">Registrar usuário</a></li>
-        </ul>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Usuários
+                </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="register" href="/cadastros/register/">Registrar</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="register" href="/cadastros/register/">Editar</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="register" href="/cadastros/register/">Deletar</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="register" href="/cadastros/register/">Exibir cadastros</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Accordion Item #2
+                </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="home" href="/cadastros/">Home</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="register" href="/cadastros/register/">Editar</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="register" href="/cadastros/register/">Deletar</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="register" href="/cadastros/register/">Exibir cadastros</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Accordion Item #3
+                </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="register" href="/cadastros/register/">Link</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        {% comment %} <hr class'fixed-buttom m-3'> {% endcomment %}
+        <div class='fixed-bottom m-3'>
+            {% if user.is_authenticated %}
+                <a href="{% url "logout_user" %}"><i class="fa-solid fa-arrow-right-from-bracket"></i> <span>sair</span></a>
+            {% else %}
+                <a href="{% url "login_user" %}"><i class="fa-solid fa-arrow-right-from-bracket"></i> <span>login</span></a>
+            {% endif %}
+        </div>
+    
         
     </div>
     </div>

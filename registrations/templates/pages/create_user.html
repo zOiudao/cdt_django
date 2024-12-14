@@ -1,13 +1,10 @@
 {% extends "base.html" %} {% block content %}
 
-<div
-  class="d-flex justify-content-center align-items-center"
-  style="height: 100vh"
->
+<div class="container position-absolute top-50 start-50 translate-middle w-25">
   <form method="post" class="card border-dark p-4">
     {% csrf_token %}
     <div class="input-group mb-3">
-      <span class="input-group-text">@</span>
+      <span class="input-group-text"><i class="fa-solid fa-circle-user"></i></span>
       <div class="form-floating">
         {{form.username}}
         <label for="floatingInputGroup1">Nome de Usuário</label>
@@ -15,7 +12,7 @@
     </div>
 
     <div class="input-group mb-3">
-      <span class="input-group-text">@</span>
+      <span class="input-group-text"><i class="fa-solid fa-universal-access"></i></span>
       <div class="form-floating">
         {{form.first_name}}
         <label for="floatingInputGroup1">Primeiro nome</label>
@@ -23,7 +20,7 @@
     </div>
 
     <div class="input-group mb-3">
-      <span class="input-group-text">@</span>
+      <span class="input-group-text"><i class="fa-regular fa-circle-user"></i></span>
       <div class="form-floating">
         {{form.last_name}}
         <label for="floatingInputGroup1">Sobrenome</label>
@@ -31,7 +28,7 @@
     </div>
 
     <div class="input-group mb-3">
-      <span class="input-group-text">@</span>
+      <span class="input-group-text"><i class="fa-solid fa-at"></i></span>
       <div class="form-floating">
         {{form.email}}
         <label for="floatingInputGroup1">Email</label>
@@ -39,7 +36,7 @@
     </div>
 
     <div class="input-group mb-3">
-      <span class="input-group-text">@</span>
+      <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
       <div class="form-floating">
         {{form.password1}}
         <label for="floatingInputGroup1">Senha</label>
@@ -47,7 +44,7 @@
     </div>
 
     <div class="input-group mb-3">
-      <span class="input-group-text">@</span>
+      <span class="input-group-text"><i class="fa-solid fa-unlock"></i></span>
       <div class="form-floating">
         {{form.password2}}
         <label for="floatingInputGroup1">Confirmar senha</label>
@@ -55,7 +52,7 @@
     </div>
 
     <div class="input-group">
-      <button type="submit" class="btn btn-outline-primary w-100">
+      <button type="submit" class="btn btn-outline-primary btn-lg w-100">
         Cadastrar
       </button>
     </div>

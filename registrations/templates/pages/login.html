@@ -1,37 +1,37 @@
 {% extends "base.html" %} {% block content %}
 
-<div
-  class="d-xl-flex justify-content-center align-items-center"
-  style="height: 100vh"
->
-  <form action="." method="post" class="card border-dark p-4">
+<div class="container position-absolute top-50 start-50 translate-middle w-25">
+  <form action="{% url "login_user" %}" method="post" class="card border-dark p-4">
+    {% csrf_token %}
     <div class="input-group mb-3">
-      <span class="input-group-text">@</span>
+      <span class="input-group-text"><i class="fa-solid fa-circle-user"></i></span>
       <div class="form-floating">
         <input
           type="text"
           class="form-control"
           id="id_username"
           placeholder="Nome de Usuário"
+          name="username"
         />
         <label for="floatingInputGroup1">Nome de Usuário</label>
       </div>
     </div>
 
     <div class="input-group mb-3">
-      <span class="input-group-text">@</span>
+      <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
       <div class="form-floating">
         <input
           type="password"
           class="form-control"
           id="id_password"
           placeholder="Senha"
+          name="password"
         />
         <label for="floatingInputGroup1">Senha</label>
       </div>
     </div>
     <div class="input-group">
-      <button type="submit" class="btn btn-outline-primary w-100">
+      <button type="submit" class="btn btn-outline-primary btn-lg w-100">
         Entrar
       </button>
     </div>

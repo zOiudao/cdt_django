@@ -20,6 +20,7 @@ class UserCreate(UserCreationForm):
             {
                 "class": "form-control",
                 "placeholder": "nome de usuário",
+                # "name": "username",
             }
         )
 
@@ -27,6 +28,7 @@ class UserCreate(UserCreationForm):
             {
                 "class": "form-control",
                 "placeholder": "primeiro nome",
+                # "name": "first_name",
             }
         )
 
@@ -34,6 +36,7 @@ class UserCreate(UserCreationForm):
             {
                 "class": "form-control",
                 "placeholder": "sobrenome",
+                # "name": "last_name",
             }
         )
 
@@ -41,6 +44,7 @@ class UserCreate(UserCreationForm):
             {
                 "class": "form-control",
                 "placeholder": "email",
+                # "name": "email",
             }
         )
 
@@ -48,6 +52,7 @@ class UserCreate(UserCreationForm):
             {
                 "class": "form-control",
                 "placeholder": "senha",
+                # "name": "password",
             }
         )
 
@@ -55,5 +60,6 @@ class UserCreate(UserCreationForm):
             {
                 "class": "form-control",
                 "placeholder": "confirmar senha",
+                # "name": "password",
             }
         )

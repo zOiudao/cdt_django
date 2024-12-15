@@ -130,9 +130,9 @@
         {% comment %} <hr class'fixed-buttom m-3'> {% endcomment %}
         <div class='fixed-bottom m-3'>
             {% if user.is_authenticated %}
-                <a href="{% url "logout_user" %}"><i class="fa-solid fa-arrow-right-from-bracket"></i> <span>sair</span></a>
+                <span><a href="{% url "logout_user" %}"><i class="fa-solid fa-arrow-right-from-bracket"></i> sair</span></a>
             {% else %}
-                <a href="{% url "login_user" %}"><i class="fa-solid fa-arrow-right-from-bracket"></i> <span>login</span></a>
+                <span><a href="{% url "login_user" %}"><i class="fa-solid fa-arrow-right-from-bracket"></i> login</span></a>
             {% endif %}
         </div>
     

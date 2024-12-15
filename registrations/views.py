@@ -2,6 +2,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.http import HttpResponse
 from . import forms
 
 
@@ -30,8 +31,20 @@ def register_user(request):
     return render(request, "pages/create_user.html", {"form": form})
 
 
+@login_required(login_url="/cadastros/")
 def logout_user(request):
     logout(request)
-    # user = request.auser()
     messages.success(request, "Sistema encerrado! Até mais...")
     return redirect("login_user")
+
+
+@login_required(login_url="/cadastros/")
+def register_employee(request):
+    if request.method == 'POST':
+        form = forms.EmployeeCreate(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Colaborador registrado com sucesso!')
+            return redirect("register_employee")
+    form = forms.EmployeeCreate()
+    return render(request, "pages/create_employee.html", {"form": form})

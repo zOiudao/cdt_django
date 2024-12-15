@@ -1,0 +1,88 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="container position-absolute top-50 start-50 translate-middle w-25">
+  <form method="post" class="card border-dark p-4">
+    {% csrf_token %}
+    <div class="input-group mb-3">
+      <span class="input-group-text"><i class="fa-solid fa-circle-user"></i></span>
+      <div class="form-floating">
+        {{form.first_name}}
+        <label for="floatingInputGroup1">Primeiro nome</label>
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text"><i class="fa-solid fa-universal-access"></i></span>
+      <div class="form-floating">
+        {{form.last_name}}
+        <label for="floatingInputGroup1">Sobrenome</label>
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text"><i class="fa-solid fa-user-tie"></i></span>
+      <div class="form-floating">
+        {{form.functional}}
+        <label for="floatingInputGroup1">Funcional</label>
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text"><i class="fa-solid fa-building-circle-check"></i></span>
+      <div class="form-floating">
+        {{form.enterprise}}
+        <label for="floatingInputGroup1">Empresa</label>
+      </div>
+
+      <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Cadastrar
+      </button>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text"><i class="fa-solid fa-laptop-file"></i></span>
+      <div class="form-floating">
+        {{form.sector}}
+        <label for="floatingInputGroup1">Setor</label>
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text"><i class="fa-solid fa-person-military-pointing"></i></span>
+      <div class="form-floating">
+        {{form.owner}}
+        <label for="floatingInputDisabled">Cadastrado por</label>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <button type="submit" class="btn btn-outline-primary btn-lg w-100">
+        Cadastrar
+      </button>
+    </div>
+  </form>
+</div>
+
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-outline-success">Cadastrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
